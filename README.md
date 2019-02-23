@@ -8,8 +8,10 @@ Nice looking volume HUD that appears right to the physical volume buttons of you
 <img src="github/DemoVideo.gif" width="270">
 
 ## Screenshots
-<img src="github/images/horizontal.png" width="250">
-<img src="github/images/vertical.png" width="250">
+<p float="left">
+  <img src="github/images/horizontal.png" width="250">
+  <img src="github/images/vertical.png" width="250">
+</p>
 
 ### Minor TODOs:
 - *Check how it looks with other devices (In iPhone X looks nice)
