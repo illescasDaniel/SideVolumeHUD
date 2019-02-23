@@ -9,8 +9,8 @@ Nice looking volume HUD that appears right to the physical volume buttons of you
 
 ## Screenshots
 <p float="left">
-  <img src="github/images/horizontal.png" width="250">
-  <img src="github/images/vertical.png" width="250">
+  <img src="github/images/horizontal_.png" width="250">
+  <img src="github/images/vertical_.png" width="250">
 </p>
 
 ### Minor TODOs:
