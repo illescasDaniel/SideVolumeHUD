@@ -5,11 +5,11 @@ SideVolumeHUD
 
 Nice looking volume HUD that appears right to the physical volume buttons of your device.
 
-<img src="github/DemoVideo" width="500">
+<img src="github/DemoVideo.gif" width="500">
 
 ## Screenshots
-<img src="github/images/horizontal.jpg" width="300">
-<img src="github/images/vertical.jpg" width="300">
+<img src="github/images/horizontal.png" width="300">
+<img src="github/images/vertical.png" width="300">
 
 ### Minor TODOs:
 - *Check how it looks with other devices (In iPhone X looks nice)
