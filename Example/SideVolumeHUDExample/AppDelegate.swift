@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		SideVolumeHUD.shared.setup(withStyle: .slideLeftRight)
-		//SideVolumeHUD.shared.setup(withStyle: .enlarge, landscapeStyle: false)
+		//SideVolumeHUD.shared.setup(withStyle: .slideLeftRight)
+		SideVolumeHUD.shared.setup(withStyle: .enlarge, landscapeStyle: true)
 		return true
 	}
 

@@ -4,8 +4,13 @@ SideVolumeHUD
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/illescasDaniel/SideVolumeHUD/blob/master/LICENSE)
 
 Nice looking volume HUD that appears right to the physical volume buttons of your device.
+You can also use it in landscape style, which looks really cool too :D
 
-<img src="github/DemoVideo.gif" width="270">
+(gifs might look a bit slower than the actual animations)
+<p float="left">
+  <img src="github/DemoVideo.gif" width="270">
+  <img src="github/DemoVideoLandscape.gif" width="270">
+</p>
 
 ## Features
 - Multiple animations available (slideInOut, enlarge, fadeInOut)
