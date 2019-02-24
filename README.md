@@ -18,7 +18,7 @@ You can also use it in landscape style, which looks really cool too :D
 - Only one place and call to set it all up:
 ```swift
 // in AppDelegate.swift, application(_, didFinishLaunchingWithOptions)
-SideVolumeHUD.shared.setup(withStyle: .slideLeftRight)
+SideVolumeHUD.shared.setup(withOptions: [.animationStyle(.slideLeftRight)])
 ```
 - All **options**:
   - Animations
