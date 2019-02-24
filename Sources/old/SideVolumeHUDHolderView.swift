@@ -3,7 +3,6 @@
 //  Github: @illescasDaniel
 //  License: MIT
 
-
 import UIKit
 
 #if canImport(Haptica)
@@ -20,16 +19,37 @@ class SideVolumeHUDHolderView: UIView {
 	
 	private static var (leading_, top_, height_, width_): (CGFloat,CGFloat,CGFloat,CGFloat) = (15, 95, 160, 50)
 	private weak var volumeHUDWindow: UIWindow?
-	private var options: SideVolumeHUD.Options!
+	private var animationStyle: SideVolumeHUD.AnimationStyle = .fadeInOut
+	private var orientationIsPortrait = false
 	
-	convenience init(withOptions options: SideVolumeHUD.Options, hudWindow: UIWindow?) {
+	convenience init(withStyle animationStyle: SideVolumeHUD.AnimationStyle, hudWindow: UIWindow?, portrait: Bool = true) {
 		self.init()
-		self.options = options
+		self.orientationIsPortrait = portrait
+		if !portrait {
+			(SideVolumeHUDHolderView.leading_, SideVolumeHUDHolderView.top_, SideVolumeHUDHolderView.height_, SideVolumeHUDHolderView.width_)
+				= (SideVolumeHUDHolderView.top_, SideVolumeHUDHolderView.leading_, SideVolumeHUDHolderView.width_, SideVolumeHUDHolderView.height_)
+		}
+		self.frame = CGRect(x: SideVolumeHUDHolderView.leading_, y: SideVolumeHUDHolderView.top_, width: SideVolumeHUDHolderView.width_, height: SideVolumeHUDHolderView.height_)
+		self.animationStyle = animationStyle
+		self.setupView()
+		self.setupNotifications()
 		self.volumeHUDWindow = hudWindow
-		self.setupFrames()
+		self.setupVolumeView(portrait: portrait)
+	}
+	private override init(frame: CGRect) {
+		super.init(frame: frame)
+		if frame != .zero {
+			self.setupView()
+			self.setupNotifications()
+			self.setupVolumeView()
+		}
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		self.setupView()
 		self.setupNotifications()
 		self.setupVolumeView()
-		self.setupView()
 	}
 	
 	// MARK: - Convenince
@@ -38,29 +58,11 @@ class SideVolumeHUDHolderView: UIView {
 		self.setupConstraints(for: view)
 	}
 	
-	private func setupFrames() {
-		if self.options.orientation == .horizontal {
-			(SideVolumeHUDHolderView.leading_, SideVolumeHUDHolderView.top_, SideVolumeHUDHolderView.height_, SideVolumeHUDHolderView.width_)
-				= (SideVolumeHUDHolderView.top_, SideVolumeHUDHolderView.leading_, SideVolumeHUDHolderView.width_, SideVolumeHUDHolderView.height_)
-		}
-		self.frame = CGRect(x: SideVolumeHUDHolderView.leading_, y: SideVolumeHUDHolderView.top_, width: SideVolumeHUDHolderView.width_, height: SideVolumeHUDHolderView.height_)
-	}
-	
 	private func setupView() {
-		if self.options.useSpecialEffects {
-			if self.options.theme == .dark {
-				self.backgroundColor = .clear
-			} else if self.options.theme == .light {
-				self.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
-			}
-			
-			self.addSpecialEffects()
-		} else {
-			self.layer.cornerRadius = 20
-			self.backgroundColor = UIColor.darkGray.withAlphaComponent(0.7)
-		}
+		self.backgroundColor = .darkGray
 		self.clipsToBounds = true
-		if let transform = self.defaultTransformation(for: self.options.animationStyle).initialTransform {
+		self.layer.cornerRadius = 15
+		if let transform = self.defaultTransformation(for: self.animationStyle).initialTransform {
 			self.transform = transform
 		}
 	}
@@ -73,7 +75,7 @@ class SideVolumeHUDHolderView: UIView {
 		let margins = view.safeAreaLayoutGuide
 		view.addSubview(self)
 		self.translatesAutoresizingMaskIntoConstraints = false
-		if self.options.orientation == .vertical {
+		if self.orientationIsPortrait {
 			self.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: SideVolumeHUDHolderView.leading_).isActive = true
 			self.topAnchor.constraint(equalTo: margins.topAnchor, constant: SideVolumeHUDHolderView.top_).isActive = true
 		} else {
@@ -85,8 +87,8 @@ class SideVolumeHUDHolderView: UIView {
 		self.layer.zPosition = 1
 	}
 	
-	private func setupVolumeView() {
-		let volumeView = SideVolumeHUDView(frame: self.bounds, portrait: self.options.orientation == .vertical, theme: self.options.theme)
+	private func setupVolumeView(portrait: Bool = true) {
+		let volumeView = SideVolumeHUDView(frame: self.bounds, portrait: portrait)
 		volumeView.tag = 10
 		self.addSubview(volumeView)
 	}
@@ -115,7 +117,7 @@ class SideVolumeHUDHolderView: UIView {
 	}
 	
 	private func animate() {
-		let transformation = self.animationTransformation(for: self.options.animationStyle)
+		let transformation = self.animationTransformation(for: self.animationStyle)
 		transformation.preAnimationStuff()
 		self.volumeHUDWindow?.isHidden = false
 		UIView.animate(withDuration: transformation.animationTime, delay: 0, usingSpringWithDamping: 0.5,initialSpringVelocity: 3,
@@ -131,8 +133,9 @@ class SideVolumeHUDHolderView: UIView {
 	}
 	
 	private func animateCompletion() {
-		let defaultTransformation = self.defaultTransformation(for: self.options.animationStyle)
+		let defaultTransformation = self.defaultTransformation(for: self.animationStyle)
 		defaultTransformation.preAnimationStuff()
+		
 		DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1400)) { //Async.main(after: 1.4) {
 			UIView.animate(withDuration: defaultTransformation.animationTime, delay: 0, options: defaultTransformation.options, animations: {
 				if let transform = defaultTransformation.transform {
@@ -175,7 +178,7 @@ class SideVolumeHUDHolderView: UIView {
 		}
 	}
 
-	private func defaultTransformation(for animationStyle: SideVolumeHUD.Option.AnimationStyle) -> Transformation  {
+	private func defaultTransformation(for animationStyle: SideVolumeHUD.AnimationStyle) -> Transformation  {
 		switch animationStyle {
 		case .enlarge:
 			var transformation = Transformation(initialTransform: CGAffineTransform(scaleX: 1, y: 0), options: [.curveEaseIn])
@@ -200,7 +203,7 @@ class SideVolumeHUDHolderView: UIView {
 		}
 	}
 	
-	private func animationTransformation(for animationStyle: SideVolumeHUD.Option.AnimationStyle) -> Transformation {
+	private func animationTransformation(for animationStyle: SideVolumeHUD.AnimationStyle) -> Transformation {
 		switch animationStyle {
 		case .enlarge:
 			return Transformation(transform: CGAffineTransform(scaleX: 1, y: 1), options: [.allowUserInteraction])
@@ -219,47 +222,5 @@ class SideVolumeHUDHolderView: UIView {
 			return transformation
 		}
 	}
-	
-	private func addSpecialEffects() {
-		self.addParallaxToView()
-		self.addBlurBackground(style: self.options.theme == .dark ? .dark : .regular, belowSubview: self.subviews.first)
-		self.round(corners: .allCorners, radius: 15)
-	}
 }
 
-fileprivate extension UIView {
-	
-	fileprivate func addParallaxToView(effectAmmount amount: Int = 15) {
-		
-		let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
-		horizontal.minimumRelativeValue = -amount
-		horizontal.maximumRelativeValue = amount
-		
-		let vertical = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
-		vertical.minimumRelativeValue = -amount
-		vertical.maximumRelativeValue = amount
-		
-		let group = UIMotionEffectGroup()
-		group.motionEffects = [horizontal, vertical]
-		self.addMotionEffect(group)
-	}
-	
-	fileprivate func addBlurBackground(style: UIBlurEffect.Style = .dark, belowSubview subview: UIView? = nil) {
-		let blurEffect = UIBlurEffect(style: style)
-		let blurEffectView = UIVisualEffectView(effect: blurEffect)
-		blurEffectView.frame = self.bounds
-		blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-		if let subview = subview {
-			self.insertSubview(blurEffectView, belowSubview: subview)
-		} else {
-			self.addSubview(blurEffectView)
-		}
-	}
-	
-	fileprivate func round(corners: UIRectCorner = .allCorners, radius: CGFloat) {
-		let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-		let mask = CAShapeLayer()
-		mask.path = path.cgPath
-		self.layer.mask = mask
-	}
-}

@@ -20,6 +20,17 @@ You can also use it in landscape style, which looks really cool too :D
 // in AppDelegate.swift, application(_, didFinishLaunchingWithOptions)
 SideVolumeHUD.shared.setup(withStyle: .slideLeftRight)
 ```
+- All **options**:
+  - Animations
+    - enlarge
+    - slideLeftRight -> default
+    - fadeInOut
+  - Theme
+    - light
+    - dark -> default
+  - Orientation
+    - vertical -> default
+    - horizontal
 
 ## Screenshots
 <p float="left">

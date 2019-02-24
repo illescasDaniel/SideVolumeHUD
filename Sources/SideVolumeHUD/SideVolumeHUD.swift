@@ -10,12 +10,6 @@ public class SideVolumeHUD {
 	
 	public static let shared = SideVolumeHUD()
 	
-	public enum AnimationStyle {
-		case enlarge
-		case slideLeftRight
-		case fadeInOut
-	}
-	
 	private let window = UIWindow()
 	
 	fileprivate init() {
@@ -27,10 +21,11 @@ public class SideVolumeHUD {
 		self.hideDefaultVolumeHUD(from: UIApplication.shared.delegate?.window ?? nil)
 		self.window.makeKey()
 	}
-	
-	public func setup(withStyle animationStyle: SideVolumeHUD.AnimationStyle = .slideLeftRight, landscapeStyle: Bool = false) {
+
+	/// Default options: dark, vertical, slideLeftRight animation, with 'special effects'
+	public func setup(withOptions options: Set<Option> = []) {
 		
-		let sideVolumeHUD = SideVolumeHUDHolderView(withStyle: animationStyle, hudWindow: self.window, portrait: !landscapeStyle)
+		let sideVolumeHUD = SideVolumeHUDHolderView(withOptions: self.optionSetToOptions(options: options), hudWindow: self.window)
 		
 		let viewController = UIViewController()
 		viewController.view.frame = self.window.frame
@@ -42,5 +37,61 @@ public class SideVolumeHUD {
 	
 	private func hideDefaultVolumeHUD(from window: UIWindow?) {
 		window?.addSubview(MPVolumeView())
+	}
+	
+	private func optionSetToOptions(options: Set<Option>) -> Options {
+		var optionsTheme: Option.Theme = .dark
+		var optionsOrientation: Option.Orientation = .vertical
+		var optionsAnimationStyle: Option.AnimationStyle = .slideLeftRight
+		var optionsUseSpecialEffects: Bool = true
+		
+		for option in options {
+			switch option {
+			case .theme(let theme):
+				optionsTheme = theme
+			case .orientation(let orientation):
+				optionsOrientation = orientation
+			case .animationStyle(let animationStyle):
+				optionsAnimationStyle = animationStyle
+			case .useSpecialEffects(let useSpecialEffets):
+				optionsUseSpecialEffects = useSpecialEffets
+			}
+		}
+		
+		return Options(theme: optionsTheme, orientation: optionsOrientation, animationStyle: optionsAnimationStyle, useSpecialEffects: optionsUseSpecialEffects)
+	}
+}
+
+// MARK: - Details
+extension SideVolumeHUD {
+	public enum Option: Hashable {
+		/// Only available if useSpecialEffects is true (which is its default value)
+		case theme(Theme)
+		case orientation(Orientation)
+		case animationStyle(AnimationStyle)
+		/// parallax effect, perfect round corners, etc
+		case useSpecialEffects(Bool)
+	}
+	internal struct Options {
+		public let theme: Option.Theme
+		public let orientation: Option.Orientation
+		public let animationStyle: Option.AnimationStyle
+		public let useSpecialEffects: Bool
+	}
+}
+
+public extension SideVolumeHUD.Option {
+	public enum AnimationStyle: Hashable {
+		case enlarge
+		case slideLeftRight
+		case fadeInOut
+	}
+	public enum Theme: Hashable {
+		case dark
+		case light
+	}
+	public enum Orientation: Hashable {
+		case vertical
+		case horizontal
 	}
 }

@@ -11,10 +11,10 @@ import FontAwesome
 
 class SideVolumeHUDView: MPVolumeView {
 	
-	convenience init(frame: CGRect, portrait: Bool, theme: SideVolumeHUD.Option.Theme) {
+	convenience init(frame: CGRect, portrait: Bool) {
 		self.init()
 		self.frame = frame
-		self.setupVolumeView(portrait: portrait, theme: theme)
+		self.setupVolumeView(portrait: portrait)
 	}
 	
 	override init(frame: CGRect) {
@@ -29,25 +29,24 @@ class SideVolumeHUDView: MPVolumeView {
 		self.setupVolumeView()
 	}
 	
-	func setupVolumeView(portrait: Bool = true, theme: SideVolumeHUD.Option.Theme = .dark) {
-		let dotColor: UIColor = theme == .dark ? .white : UIColor.darkGray
-		let iconsColor: UIColor = theme == .dark ? .white : UIColor.black.withAlphaComponent(0.65)
+	func setupVolumeView(portrait: Bool = true) {
+		
 		#if canImport(FontAwesome)
-		let miniThumbImage = UIImage.fontAwesomeIcon(name: .circle, style: .solid, textColor: dotColor, size: CGSize(width: 15, height: 15))
+		let miniThumbImage = UIImage.fontAwesomeIcon(name: .circle, style: .solid, textColor: .white, size: CGSize(width: 15, height: 15))
 		#else
-		let miniThumbImage = UIImage(imageLiteralResourceName: "dotIcon").resize(to: 15, withColor: iconsColor)
+		let miniThumbImage = UIImage(imageLiteralResourceName: "dotIcon").resize(to: 15, withColor: .white)
 		#endif
 		
 		#if canImport(FontAwesome)
-		var minVolumeImage = UIImage.fontAwesomeIcon(name: .volumeDown, style: .solid, textColor: iconsColor, size: CGSize(width: 20, height: 20))
+		var minVolumeImage = UIImage.fontAwesomeIcon(name: .volumeDown, style: .solid, textColor: .white, size: CGSize(width: 20, height: 20))
 		#else
-		var minVolumeImage = UIImage(imageLiteralResourceName: "minVolumeIcon").resize(to: 20, withColor: iconsColor)
+		var minVolumeImage = UIImage(imageLiteralResourceName: "minVolumeIcon").resize(to: 20, withColor: .white)
 		#endif
 		
 		#if canImport(FontAwesome)
-		var maxVolumeImage = UIImage.fontAwesomeIcon(name: .volumeUp, style: .solid, textColor: iconsColor, size: CGSize(width: 20, height: 20))
+		var maxVolumeImage = UIImage.fontAwesomeIcon(name: .volumeUp, style: .solid, textColor: .white, size: CGSize(width: 20, height: 20))
 		#else
-		var maxVolumeImage = UIImage(imageLiteralResourceName: "maxVolumeIcon").resize(to: 20, withColor: iconsColor)
+		var maxVolumeImage = UIImage(imageLiteralResourceName: "maxVolumeIcon").resize(to: 20, withColor: .white)
 		#endif
 		
 		if portrait {
