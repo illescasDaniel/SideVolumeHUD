@@ -7,6 +7,15 @@ Nice looking volume HUD that appears right to the physical volume buttons of you
 
 <img src="github/DemoVideo.gif" width="270">
 
+## Features
+- Multiple animations available (slideInOut, enlarge, fadeInOut)
+- Haptic feedback
+- Only one place and call to set it all up:
+```swift
+// in AppDelegate.swift, application(_, didFinishLaunchingWithOptions)
+SideVolumeHUD.shared.setup(withStyle: .slideLeftRight)
+```
+
 ## Screenshots
 <p float="left">
   <img src="github/images/horizontal_.png" width="250">
