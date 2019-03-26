@@ -1,4 +1,4 @@
-//  SideVolumeView.swift
+//  SideVolumeHUDView.swift
 //  by Daniel Illescas Romero
 //  Github: @illescasDaniel
 //  License: MIT
@@ -31,11 +31,11 @@ class SideVolumeHUDView: MPVolumeView {
 	
 	func setupVolumeView(portrait: Bool = true, theme: SideVolumeHUD.Option.Theme = .dark) {
 		let dotColor: UIColor = theme == .dark ? .white : UIColor.darkGray
-		let iconsColor: UIColor = theme == .dark ? .white : UIColor.black.withAlphaComponent(0.65)
+		let iconsColor: UIColor = theme == .dark ? .white : UIColor.darkGray.withAlphaComponent(0.85)
 		#if canImport(FontAwesome)
 		let miniThumbImage = UIImage.fontAwesomeIcon(name: .circle, style: .solid, textColor: dotColor, size: CGSize(width: 15, height: 15))
 		#else
-		let miniThumbImage = UIImage(imageLiteralResourceName: "dotIcon").resize(to: 15, withColor: iconsColor)
+		let miniThumbImage = UIImage(imageLiteralResourceName: "dotIcon").resize(to: 15, withColor: dotColor)
 		#endif
 		
 		#if canImport(FontAwesome)
@@ -90,68 +90,99 @@ fileprivate enum Direction: CGFloat {
 
 fileprivate extension UIImage {
 	
-	fileprivate func rotated(_ direction: Direction) -> UIImage {
+	func rotated(_ direction: Direction) -> UIImage {
 		let degrees = direction.rawValue
 		guard Int(degrees) % 360 != 0, let cgImage = cgImage else {
 			return self
 		}
 		
-		let renderer = UIGraphicsImageRenderer(size: self.size)
-		return renderer.image { context in
-			
-			let radians = degrees.inRadians
-			let newSize = (Int(degrees) % 180 == 0) ? self.size : CGSize(width: size.height, height: size.width)
-			
-			let ctx = context.cgContext
-			ctx.translateBy(x: newSize.width / 2, y: newSize.height / 2)
-			ctx.rotate(by: radians)
-			
-			let origin = CGPoint(x: -(self.size.width / 2), y: -(self.size.height / 2))
-			let rect = CGRect(origin: origin, size: self.size)
-			ctx.draw(cgImage, in: rect)
+		if #available(iOS 10.0, *) {
+			let renderer = UIGraphicsImageRenderer(size: self.size)
+			return renderer.image { context in
+				
+				let radians = degrees.inRadians
+				let newSize = (Int(degrees) % 180 == 0) ? self.size : CGSize(width: size.height, height: size.width)
+				
+				let ctx = context.cgContext
+				ctx.translateBy(x: newSize.width / 2, y: newSize.height / 2)
+				ctx.rotate(by: radians)
+				
+				let origin = CGPoint(x: -(self.size.width / 2), y: -(self.size.height / 2))
+				let rect = CGRect(origin: origin, size: self.size)
+				ctx.draw(cgImage, in: rect)
+			}
+		} else {
+			var newImage: UIImage = self
+			UIGraphicsBeginImageContextWithOptions(self.size, false, 1)
+			if let ctx = UIGraphicsGetCurrentContext() {
+				
+				let radians = degrees.inRadians
+				let newSize = (Int(degrees) % 180 == 0) ? self.size : CGSize(width: size.height, height: size.width)
+				
+				ctx.translateBy(x: newSize.width / 2, y: newSize.height / 2)
+				ctx.rotate(by: radians)
+				
+				let origin = CGPoint(x: -(self.size.width / 2), y: -(self.size.height / 2))
+				let rect = CGRect(origin: origin, size: self.size)
+				ctx.draw(cgImage, in: rect)
+				
+				if let img = ctx.makeImage() {
+					newImage = UIImage(cgImage: img)
+				}
+				UIGraphicsEndImageContext()
+			}
+			return newImage
 		}
 	}
 	
-
-	/*fileprivate func scaleImage(toSize newSize: CGSize) -> UIImage? {
-		var newImage: UIImage?
-		let newRect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height).integral
-		UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-		if let context = UIGraphicsGetCurrentContext(), let cgImage = self.cgImage {
-			context.interpolationQuality = .high
-			let flipVertical = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: newSize.height)
-			context.concatenate(flipVertical)
-			context.draw(cgImage, in: newRect)
-			if let img = context.makeImage() {
-				newImage = UIImage(cgImage: img)
-			}
-			UIGraphicsEndImageContext()
-		}
-		return newImage
-	}*/
 	#if !canImport(FontAwesome)
-	fileprivate func resize(to newWidth: CGFloat, withColor color: UIColor? = nil) -> UIImage {
+	func resize(to newWidth: CGFloat, withColor color: UIColor? = nil) -> UIImage {
+		
 		let scale = newWidth / self.size.width
 		let newHeight = self.size.height * scale
 		let newSize = CGSize(width: newWidth, height: newHeight)
 		
-		let renderer = UIGraphicsImageRenderer(size: newSize)
-		
-		let image = renderer.image { (context) in
-			
-			let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: newSize)
-			
-			if let color = color {
-				color.setFill()
-				let ctx = context.cgContext
-				ctx.clip(to: rect, mask: self.cgImage!)
-				ctx.fill(rect)
+		if #available(iOS 10.0, *) {
+			guard let cgImage = self.cgImage else { return self }
+			let renderer = UIGraphicsImageRenderer(size: newSize)
+			return renderer.image { (context) in
+				
+				let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: newSize)
+				
+				if let color = color {
+					color.setFill()
+					let ctx = context.cgContext
+					ctx.clip(to: rect, mask: cgImage)
+					ctx.fill(rect)
+				}
+				
+				self.draw(in: rect)
 			}
-			UIColor.white.setFill()
-			
-			self.draw(in: rect)
+		} else {
+			// it's blurry but ok :/
+			var newImage: UIImage = self
+			UIGraphicsBeginImageContextWithOptions(newSize, false, 1)
+			if let ctx = UIGraphicsGetCurrentContext() {
+				
+				ctx.interpolationQuality = .high
+				
+				let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: newSize)
+				
+				if let color = color {
+					color.setFill()
+					ctx.clip(to: rect, mask: self.cgImage!)
+					ctx.fill(rect)
+				}
+				
+				self.draw(in: rect)
+				
+				if let img = ctx.makeImage() {
+					newImage = UIImage(cgImage: img)
+				}
+				UIGraphicsEndImageContext()
+			}
+			return newImage
 		}
-		return image
 	}
 	#endif
 }

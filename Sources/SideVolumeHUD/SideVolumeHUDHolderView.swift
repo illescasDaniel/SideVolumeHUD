@@ -1,4 +1,4 @@
-//  SideVolumeHUD.swift
+//  SideVolumeHUDHolderView.swift
 //  by Daniel Illescas Romero
 //  Github: @illescasDaniel
 //  License: MIT
@@ -11,7 +11,7 @@ import Haptica
 #endif
 
 fileprivate extension Notification.Name {
-	fileprivate enum AVSystemController {
+	enum AVSystemController {
 		static let AudioVolumeNoficationParameter = Notification.Name(rawValue: "AVSystemController_SystemVolumeDidChangeNotification")
 	}
 }
@@ -70,7 +70,12 @@ class SideVolumeHUDHolderView: UIView {
 	}
 	
 	private func setupConstraints(for view: UIView) {
-		let margins = view.safeAreaLayoutGuide
+		let margins: UILayoutGuide
+		/*if #available(iOS 11.0, *) {
+		margins = view.safeAreaLayoutGuide
+		} else {*/
+		margins = view.layoutMarginsGuide
+		//}
 		view.addSubview(self)
 		self.translatesAutoresizingMaskIntoConstraints = false
 		if self.options.orientation == .vertical {
@@ -90,7 +95,7 @@ class SideVolumeHUDHolderView: UIView {
 		volumeView.tag = 10
 		self.addSubview(volumeView)
 	}
-
+	
 	private var animatingVolumeChange = false
 	
 	@objc private func volumeDidChange() {
@@ -99,7 +104,9 @@ class SideVolumeHUDHolderView: UIView {
 			#if canImport(Haptica)
 			Haptic.selection.generate()
 			#else
-			UISelectionFeedbackGenerator().selectionChanged()
+			if #available(iOS 10.0, *) {
+				UISelectionFeedbackGenerator().selectionChanged()
+			}
 			#endif
 			return
 		}
@@ -107,7 +114,9 @@ class SideVolumeHUDHolderView: UIView {
 		#if canImport(Haptica)
 		Haptic.impact(.light).generate()
 		#else
-		UIImpactFeedbackGenerator(style: .light).impactOccurred()
+		if #available(iOS 10.0, *) {
+			UIImpactFeedbackGenerator(style: .light).impactOccurred()
+		}
 		#endif
 		
 		self.animatingVolumeChange = true
@@ -120,10 +129,10 @@ class SideVolumeHUDHolderView: UIView {
 		self.volumeHUDWindow?.isHidden = false
 		UIView.animate(withDuration: transformation.animationTime, delay: 0, usingSpringWithDamping: 0.5,initialSpringVelocity: 3,
 					   options: transformation.options, animations: {
-			if let transform = transformation.transform {
-				self.transform = transform
-			}
-			transformation.animationStuff()
+						if let transform = transformation.transform {
+							self.transform = transform
+						}
+						transformation.animationStuff()
 		}, completion: { completed in
 			guard completed else { return }
 			self.animateCompletion()
@@ -174,7 +183,7 @@ class SideVolumeHUDHolderView: UIView {
 			self.initialTransform = nil
 		}
 	}
-
+	
 	private func defaultTransformation(for animationStyle: SideVolumeHUD.Option.AnimationStyle) -> Transformation  {
 		switch animationStyle {
 		case .enlarge:
@@ -222,14 +231,20 @@ class SideVolumeHUDHolderView: UIView {
 	
 	private func addSpecialEffects() {
 		self.addParallaxToView()
-		self.addBlurBackground(style: self.options.theme == .dark ? .dark : .regular, belowSubview: self.subviews.first)
+		let notDarkStyle: UIBlurEffect.Style
+		if #available(iOS 10.0, *) {
+			notDarkStyle = .prominent
+		} else {
+			notDarkStyle = .light
+		}
+		self.addBlurBackground(style: self.options.theme == .dark ? .dark : notDarkStyle, belowSubview: self.subviews.first)
 		self.round(corners: .allCorners, radius: 15)
 	}
 }
 
 fileprivate extension UIView {
 	
-	fileprivate func addParallaxToView(effectAmmount amount: Int = 15) {
+	func addParallaxToView(effectAmmount amount: Int = 15) {
 		
 		let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
 		horizontal.minimumRelativeValue = -amount
@@ -244,7 +259,7 @@ fileprivate extension UIView {
 		self.addMotionEffect(group)
 	}
 	
-	fileprivate func addBlurBackground(style: UIBlurEffect.Style = .dark, belowSubview subview: UIView? = nil) {
+	func addBlurBackground(style: UIBlurEffect.Style = .dark, belowSubview subview: UIView? = nil) {
 		let blurEffect = UIBlurEffect(style: style)
 		let blurEffectView = UIVisualEffectView(effect: blurEffect)
 		blurEffectView.frame = self.bounds
@@ -256,7 +271,7 @@ fileprivate extension UIView {
 		}
 	}
 	
-	fileprivate func round(corners: UIRectCorner = .allCorners, radius: CGFloat) {
+	func round(corners: UIRectCorner = .allCorners, radius: CGFloat) {
 		let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
 		let mask = CAShapeLayer()
 		mask.path = path.cgPath

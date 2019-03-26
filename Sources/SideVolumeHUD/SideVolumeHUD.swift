@@ -1,4 +1,4 @@
-//  SideVolumeHUDWindow.swift
+//  SideVolumeHUD.swift
 //  by Daniel Illescas Romero
 //  Github: @illescasDaniel
 //  License: MIT
@@ -21,7 +21,7 @@ public class SideVolumeHUD {
 		self.hideDefaultVolumeHUD(from: UIApplication.shared.delegate?.window ?? nil)
 		self.window.makeKey()
 	}
-
+	
 	/// Default options: dark, vertical, slideLeftRight animation, with 'special effects'
 	public func setup(withOptions options: Set<Option> = []) {
 		
@@ -31,8 +31,20 @@ public class SideVolumeHUD {
 		viewController.view.frame = self.window.frame
 		viewController.view.backgroundColor = .clear
 		sideVolumeHUD.configure(for: viewController.view)
+		viewController.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.backgroundViewAction)))
 		
 		self.window.rootViewController = viewController
+	}
+	
+	@objc private func backgroundViewAction(_ sender: UIView) {
+		UIView.animate(withDuration: 0.15, animations: {
+			self.window.alpha = 0
+		}, completion: { completed in
+			if completed {
+				self.window.isHidden = true
+				self.window.alpha = 1
+			}
+		})
 	}
 	
 	private func hideDefaultVolumeHUD(from window: UIWindow?) {
@@ -81,16 +93,16 @@ extension SideVolumeHUD {
 }
 
 public extension SideVolumeHUD.Option {
-	public enum AnimationStyle: Hashable {
+	enum AnimationStyle: Hashable {
 		case enlarge
 		case slideLeftRight
 		case fadeInOut
 	}
-	public enum Theme: Hashable {
+	enum Theme: Hashable {
 		case dark
 		case light
 	}
-	public enum Orientation: Hashable {
+	enum Orientation: Hashable {
 		case vertical
 		case horizontal
 	}
