@@ -4,14 +4,34 @@
 //  License: MIT
 
 @_exported import Foundation
-
-import class UIKit.UIViewController
-import class UIKit.UITapGestureRecognizer
-import class UIKit.UIScreen
-import class UIKit.UIView
-import class UIKit.UIWindow
-import class UIKit.UIColor
-import class MediaPlayer.MPVolumeView
+@_exported import class UIKit.UIViewController
+@_exported import class UIKit.UITapGestureRecognizer
+@_exported import class UIKit.UIScreen
+@_exported import class UIKit.UIView
+@_exported import class UIKit.UIWindow
+@_exported import class UIKit.UIColor
+@_exported import class UIKit.UIImage
+@_exported import class UIKit.UISlider
+@_exported import class UIKit.UIBlurEffect
+@_exported import class UIKit.UIBezierPath
+@_exported import class UIKit.UIMotionEffectGroup
+@_exported import func UIKit.UIGraphicsBeginImageContextWithOptions
+@_exported import func UIKit.UIGraphicsEndImageContext
+@_exported import func UIKit.UIGraphicsGetCurrentContext
+@_exported import class UIKit.UILayoutGuide
+@_exported import class UIKit.UIInterpolatingMotionEffect
+@_exported import struct UIKit.UIRectCorner
+@_exported import class UIKit.UIVisualEffectView
+@_exported import class UIKit.UIImpactFeedbackGenerator
+@_exported import class UIKit.UISelectionFeedbackGenerator
+@_exported import class UIKit.UIGraphicsImageRenderer
+@_exported import struct CoreGraphics.CGFloat
+@_exported import struct CoreGraphics.CGRect
+@_exported import struct CoreGraphics.CGSize
+@_exported import struct CoreGraphics.CGPoint
+@_exported import struct CoreGraphics.CGAffineTransform
+@_exported import class QuartzCore.CAShapeLayer
+@_exported import class MediaPlayer.MPVolumeView
 
 public class SideVolumeHUD {
 	

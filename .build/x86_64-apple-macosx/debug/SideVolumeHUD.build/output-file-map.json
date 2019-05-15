@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/master.swiftdeps"
+  },
+  "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/Sources/SideVolumeHUD.swift": {
+    "dependencies": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUD.d",
+    "object": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUD.swift.o",
+    "swiftmodule": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUD~partial.swiftmodule",
+    "swift-dependencies": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUD.swiftdeps"
+  },
+  "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/Sources/SideVolumeHUDHolderView.swift": {
+    "dependencies": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUDHolderView.d",
+    "object": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUDHolderView.swift.o",
+    "swiftmodule": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUDHolderView~partial.swiftmodule",
+    "swift-dependencies": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUDHolderView.swiftdeps"
+  },
+  "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/Sources/SideVolumeHUDView.swift": {
+    "dependencies": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUDView.d",
+    "object": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUDView.swift.o",
+    "swiftmodule": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUDView~partial.swiftmodule",
+    "swift-dependencies": "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/.build/x86_64-apple-macosx/debug/SideVolumeHUD.build/SideVolumeHUDView.swiftdeps"
+  }
+}

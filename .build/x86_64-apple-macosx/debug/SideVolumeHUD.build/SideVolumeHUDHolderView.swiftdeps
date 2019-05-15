@@ -1,0 +1,352 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SideVolumeHUDHolderView"
+provides-nominal:
+- "13SideVolumeHUD0aB13HUDHolderViewC"
+provides-member:
+- ["13SideVolumeHUD0aB13HUDHolderViewC", ""]
+provides-dynamic-lookup:
+- "volumeDidChange"
+depends-top-level:
+- !private "!"
+- !private "+"
+- !private "-"
+- !private "/"
+- "=="
+- "AssignmentPrecedence"
+- !private "CAShapeLayer"
+- "CGAffineTransform"
+- "CGFloat"
+- !private "CGRect"
+- !private "CGSize"
+- !private "DispatchQueue"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "Notification"
+- !private "NotificationCenter"
+- "SideVolumeHUD"
+- "SideVolumeHUDHolderView"
+- !private "SideVolumeHUDView"
+- "String"
+- "StringLiteralType"
+- "TernaryPrecedence"
+- !private "UIBezierPath"
+- "UIBlurEffect"
+- !private "UIColor"
+- !private "UIImpactFeedbackGenerator"
+- !private "UIInterpolatingMotionEffect"
+- !private "UILayoutGuide"
+- !private "UIMotionEffectGroup"
+- "UIRectCorner"
+- !private "UISelectionFeedbackGenerator"
+- "UIView"
+- !private "UIVisualEffectView"
+- "UIWindow"
+- "Void"
+- !private "_findStringSwitchCase"
+- !private "bounds"
+- !private "~="
+depends-member:
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "enlarge"]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "fadeInOut"]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "slideLeftRight"]
+- !private ["So7CALayerC", "init"]
+- !private ["So7CALayerC", "path"]
+- !private ["So13CAMediaTimingP", "init"]
+- !private ["So13CAMediaTimingP", "path"]
+- !private ["So12CAShapeLayerC", "init"]
+- !private ["So12CAShapeLayerC", "path"]
+- !private ["So17CGAffineTransformV", "init"]
+- !private ["So6CGRectV", "init"]
+- !private ["s7CVarArgP", "addObserver"]
+- !private ["s7CVarArgP", "asyncAfter"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "path"]
+- ["s28CustomDebugStringConvertibleP", "Name"]
+- !private ["s28CustomDebugStringConvertibleP", "addObserver"]
+- !private ["s28CustomDebugStringConvertibleP", "asyncAfter"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
+- ["s17CustomReflectableP", "Name"]
+- !private ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "Name"]
+- !private ["s23CustomStringConvertibleP", "addObserver"]
+- !private ["s23CustomStringConvertibleP", "asyncAfter"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "path"]
+- !private ["Se", "init"]
+- !private ["So18OS_dispatch_objectC", "asyncAfter"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "asyncAfter"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["SE", "init"]
+- ["SQ", "=="]
+- !private ["SQ", "AVSystemController"]
+- ["SQ", "AnimationStyle"]
+- !private ["SQ", "AudioVolumeNoficationParameter"]
+- ["SQ", "Name"]
+- ["SQ", "Notification"]
+- ["SQ", "RawValue"]
+- !private ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "addObserver"]
+- !private ["SQ", "asyncAfter"]
+- ["SQ", "audioVolumeNoficationKey"]
+- !private ["SQ", "dark"]
+- !private ["SQ", "default"]
+- ["SQ", "enlarge"]
+- ["SQ", "fadeInOut"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "horizontal"]
+- ["SQ", "init"]
+- !private ["SQ", "light"]
+- !private ["SQ", "main"]
+- !private ["SQ", "path"]
+- ["SQ", "rawValue"]
+- ["SQ", "slideLeftRight"]
+- !private ["SQ", "vertical"]
+- ["SH", "=="]
+- !private ["SH", "AVSystemController"]
+- ["SH", "AnimationStyle"]
+- !private ["SH", "AudioVolumeNoficationParameter"]
+- ["SH", "Name"]
+- ["SH", "Notification"]
+- ["SH", "RawValue"]
+- !private ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "addObserver"]
+- !private ["SH", "asyncAfter"]
+- ["SH", "audioVolumeNoficationKey"]
+- !private ["SH", "dark"]
+- !private ["SH", "default"]
+- ["SH", "enlarge"]
+- ["SH", "fadeInOut"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "horizontal"]
+- ["SH", "init"]
+- !private ["SH", "light"]
+- !private ["SH", "main"]
+- !private ["SH", "path"]
+- ["SH", "rawValue"]
+- ["SH", "slideLeftRight"]
+- !private ["SH", "vertical"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "path"]
+- !private ["So8NSObjectC", "addObserver"]
+- !private ["So8NSObjectC", "asyncAfter"]
+- !private ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "path"]
+- !private ["So8NSObjectP", "addObserver"]
+- !private ["So8NSObjectP", "asyncAfter"]
+- !private ["So8NSObjectP", "default"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "path"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "path"]
+- !private ["So18NSNotificationNamea", "AVSystemController"]
+- ["So18NSNotificationNamea", "Notification"]
+- ["So18NSNotificationNamea", "String"]
+- !private ["So18NSNotificationNamea", "_findStringSwitchCase"]
+- ["So18NSNotificationNamea", "init"]
+- ["10Foundation12NotificationV", "Name"]
+- !private ["So20NSNotificationCenterC", "addObserver"]
+- !private ["So20NSNotificationCenterC", "default"]
+- !private ["So9OS_objectC", "asyncAfter"]
+- !private ["So9OS_objectC", "main"]
+- ["13SideVolumeHUDAAC6OptionO", "AnimationStyle"]
+- !private ["13SideVolumeHUDAAC7OptionsV", "animationStyle"]
+- ["13SideVolumeHUDAAC7OptionsV", "defaults"]
+- !private ["13SideVolumeHUDAAC7OptionsV", "orientation"]
+- !private ["13SideVolumeHUDAAC7OptionsV", "theme"]
+- !private ["13SideVolumeHUDAAC7OptionsV", "useSpecialEffects"]
+- !private ["13SideVolumeHUDAAC6OptionO11OrientationO", "deinit"]
+- !private ["13SideVolumeHUDAAC6OptionO11OrientationO", "horizontal"]
+- !private ["13SideVolumeHUDAAC6OptionO11OrientationO", "vertical"]
+- ["SY", "=="]
+- !private ["SY", "AVSystemController"]
+- !private ["SY", "AudioVolumeNoficationParameter"]
+- ["SY", "Notification"]
+- ["SY", "RawValue"]
+- !private ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- ["SY", "audioVolumeNoficationKey"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- ["SY", "rawValue"]
+- ["10Foundation20ReferenceConvertibleP", "Name"]
+- ["13SideVolumeHUDAAC", "Option"]
+- ["13SideVolumeHUDAAC", "Options"]
+- ["13SideVolumeHUD0aB13HUDHolderViewC", "CGAffineTransform"]
+- ["13SideVolumeHUD0aB13HUDHolderViewC", "CGFloat"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "CGRect"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "DispatchQueue"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "Notification"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "NotificationCenter"]
+- ["13SideVolumeHUD0aB13HUDHolderViewC", "SideVolumeHUD"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "SideVolumeHUDHolderView"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "SideVolumeHUDView"]
+- ["13SideVolumeHUD0aB13HUDHolderViewC", "Transformation"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "UIBlurEffect"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "UIColor"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "UIImpactFeedbackGenerator"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "UILayoutGuide"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "UISelectionFeedbackGenerator"]
+- ["13SideVolumeHUD0aB13HUDHolderViewC", "UIView"]
+- ["13SideVolumeHUD0aB13HUDHolderViewC", "UIWindow"]
+- ["13SideVolumeHUD0aB13HUDHolderViewC", "Void"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "addBlurBackground"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "addParallaxToView"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "addSpecialEffects"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "addSubview"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "animate"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "animateCompletion"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "animatingVolumeChange"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "animationTransformation"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "backgroundColor"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "bounds"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "clipsToBounds"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "defaultTransformation"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "frame"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "height"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "heightAnchor"]
+- ["13SideVolumeHUD0aB13HUDHolderViewC", "init"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "init"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "layer"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "leading"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "leadingAnchor"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "options"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "round"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "setupConstraints"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "setupFrames"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "setupNotifications"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "setupView"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "setupVolumeView"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "top"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "topAnchor"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "transform"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "volumeDidChange"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "volumeHUDWindow"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "width"]
+- !private ["13SideVolumeHUD0aB13HUDHolderViewC", "widthAnchor"]
+- ["13SideVolumeHUD0aB7HUDViewC", "init"]
+- !private ["13SideVolumeHUDAAC6OptionO5ThemeO", "dark"]
+- !private ["13SideVolumeHUDAAC6OptionO5ThemeO", "deinit"]
+- !private ["13SideVolumeHUDAAC6OptionO5ThemeO", "light"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "AVSystemController"]
+- ["s35_HasCustomAnyHashableRepresentationP", "Notification"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "_findStringSwitchCase"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addObserver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "asyncAfter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "path"]
+- !private ["s21_ObjectiveCBridgeableP", "AVSystemController"]
+- ["s21_ObjectiveCBridgeableP", "Name"]
+- ["s21_ObjectiveCBridgeableP", "Notification"]
+- !private ["s21_ObjectiveCBridgeableP", "_findStringSwitchCase"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s20_SwiftNewtypeWrapperP", "AVSystemController"]
+- ["s20_SwiftNewtypeWrapperP", "Notification"]
+- !private ["s20_SwiftNewtypeWrapperP", "_findStringSwitchCase"]
+- ["s20_SwiftNewtypeWrapperP", "init"]
+depends-nominal:
+- "13SideVolumeHUDAAC6OptionO14AnimationStyleO"
+- !private "So7CALayerC"
+- !private "So13CAMediaTimingP"
+- !private "So12CAShapeLayerC"
+- !private "So17CGAffineTransformV"
+- !private "So6CGRectV"
+- !private "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "SE"
+- "SQ"
+- "SH"
+- !private "So8NSCodingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- "So18NSNotificationNamea"
+- "10Foundation12NotificationV"
+- !private "So20NSNotificationCenterC"
+- !private "So9OS_objectC"
+- "13SideVolumeHUDAAC6OptionO"
+- "13SideVolumeHUDAAC7OptionsV"
+- !private "13SideVolumeHUDAAC6OptionO11OrientationO"
+- "SY"
+- "10Foundation20ReferenceConvertibleP"
+- "13SideVolumeHUDAAC"
+- "13SideVolumeHUD0aB13HUDHolderViewC"
+- "13SideVolumeHUD0aB7HUDViewC"
+- !private "13SideVolumeHUDAAC6OptionO5ThemeO"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "c4416018e3adb77b784e4bf9969bc062"

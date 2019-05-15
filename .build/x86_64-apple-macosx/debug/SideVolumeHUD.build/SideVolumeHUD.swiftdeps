@@ -1,0 +1,192 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SideVolumeHUD"
+provides-nominal:
+- "13SideVolumeHUDAAC"
+- "13SideVolumeHUDAAC6OptionO"
+- "13SideVolumeHUDAAC7OptionsV"
+- "13SideVolumeHUDAAC6OptionO14AnimationStyleO"
+- "13SideVolumeHUDAAC6OptionO5ThemeO"
+- "13SideVolumeHUDAAC6OptionO11OrientationO"
+provides-member:
+- ["13SideVolumeHUDAAC", ""]
+- ["13SideVolumeHUDAAC6OptionO", ""]
+- ["13SideVolumeHUDAAC7OptionsV", ""]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", ""]
+- ["13SideVolumeHUDAAC6OptionO5ThemeO", ""]
+- ["13SideVolumeHUDAAC6OptionO11OrientationO", ""]
+- ["13SideVolumeHUDAAC", "Option"]
+- ["13SideVolumeHUDAAC", "Options"]
+- ["13SideVolumeHUDAAC6OptionO", "AnimationStyle"]
+- ["13SideVolumeHUDAAC6OptionO", "Theme"]
+- ["13SideVolumeHUDAAC6OptionO", "Orientation"]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- !private "FloatLiteralType"
+- "Hashable"
+- !private "IntegerLiteralType"
+- !private "MPVolumeView"
+- "Set"
+- "SideVolumeHUD"
+- !private "SideVolumeHUDHolderView"
+- !private "UIColor"
+- !private "UIScreen"
+- !private "UITapGestureRecognizer"
+- "UIView"
+- !private "UIViewController"
+- "UIWindow"
+depends-member:
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "=="]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "__derived_enum_equals"]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "_rawHashValue"]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "deinit"]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "enlarge"]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "fadeInOut"]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "hash"]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "hashValue"]
+- ["13SideVolumeHUDAAC6OptionO14AnimationStyleO", "slideLeftRight"]
+- ["SQ", "=="]
+- ["SQ", "AnimationStyle"]
+- ["SQ", "Orientation"]
+- ["SQ", "Theme"]
+- ["SQ", ""]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "animationStyle"]
+- ["SQ", "dark"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "orientation"]
+- ["SQ", "slideLeftRight"]
+- ["SQ", "theme"]
+- ["SQ", "useSpecialEffects"]
+- ["SQ", "vertical"]
+- ["SH", "=="]
+- ["SH", "AnimationStyle"]
+- ["SH", "Orientation"]
+- ["SH", "Theme"]
+- ["SH", ""]
+- ["SH", "_rawHashValue"]
+- ["SH", "animationStyle"]
+- ["SH", "dark"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "orientation"]
+- ["SH", "slideLeftRight"]
+- ["SH", "theme"]
+- ["SH", "useSpecialEffects"]
+- ["SH", "vertical"]
+- !private ["s6HasherV", "combine"]
+- ["13SideVolumeHUDAAC6OptionO", "=="]
+- ["13SideVolumeHUDAAC6OptionO", "AnimationStyle"]
+- ["13SideVolumeHUDAAC6OptionO", "Bool"]
+- ["13SideVolumeHUDAAC6OptionO", "Hashable"]
+- ["13SideVolumeHUDAAC6OptionO", "Orientation"]
+- ["13SideVolumeHUDAAC6OptionO", "Theme"]
+- ["13SideVolumeHUDAAC6OptionO", "__derived_enum_equals"]
+- ["13SideVolumeHUDAAC6OptionO", "_rawHashValue"]
+- ["13SideVolumeHUDAAC6OptionO", "animationStyle"]
+- ["13SideVolumeHUDAAC6OptionO", "deinit"]
+- ["13SideVolumeHUDAAC6OptionO", "hash"]
+- ["13SideVolumeHUDAAC6OptionO", "hashValue"]
+- ["13SideVolumeHUDAAC6OptionO", "orientation"]
+- ["13SideVolumeHUDAAC6OptionO", "theme"]
+- ["13SideVolumeHUDAAC6OptionO", "useSpecialEffects"]
+- ["13SideVolumeHUDAAC7OptionsV", "Bool"]
+- ["13SideVolumeHUDAAC7OptionsV", "Option"]
+- ["13SideVolumeHUDAAC7OptionsV", "Options"]
+- ["13SideVolumeHUDAAC7OptionsV", "animationStyle"]
+- ["13SideVolumeHUDAAC7OptionsV", "defaults"]
+- ["13SideVolumeHUDAAC7OptionsV", "init"]
+- ["13SideVolumeHUDAAC7OptionsV", "orientation"]
+- ["13SideVolumeHUDAAC7OptionsV", "theme"]
+- ["13SideVolumeHUDAAC7OptionsV", "useSpecialEffects"]
+- ["13SideVolumeHUDAAC6OptionO11OrientationO", "=="]
+- ["13SideVolumeHUDAAC6OptionO11OrientationO", "__derived_enum_equals"]
+- ["13SideVolumeHUDAAC6OptionO11OrientationO", "_rawHashValue"]
+- ["13SideVolumeHUDAAC6OptionO11OrientationO", "deinit"]
+- ["13SideVolumeHUDAAC6OptionO11OrientationO", "hash"]
+- ["13SideVolumeHUDAAC6OptionO11OrientationO", "hashValue"]
+- ["13SideVolumeHUDAAC6OptionO11OrientationO", "horizontal"]
+- ["13SideVolumeHUDAAC6OptionO11OrientationO", "vertical"]
+- ["13SideVolumeHUDAAC", "Bool"]
+- ["13SideVolumeHUDAAC", "Hashable"]
+- !private ["13SideVolumeHUDAAC", "MPVolumeView"]
+- ["13SideVolumeHUDAAC", "Option"]
+- ["13SideVolumeHUDAAC", "Options"]
+- ["13SideVolumeHUDAAC", "Set"]
+- ["13SideVolumeHUDAAC", "SideVolumeHUD"]
+- !private ["13SideVolumeHUDAAC", "SideVolumeHUDHolderView"]
+- !private ["13SideVolumeHUDAAC", "UIColor"]
+- !private ["13SideVolumeHUDAAC", "UIScreen"]
+- !private ["13SideVolumeHUDAAC", "UITapGestureRecognizer"]
+- ["13SideVolumeHUDAAC", "UIView"]
+- !private ["13SideVolumeHUDAAC", "UIViewController"]
+- ["13SideVolumeHUDAAC", "UIWindow"]
+- ["13SideVolumeHUDAAC", "init"]
+- !private ["13SideVolumeHUDAAC", "optionSetToOptions"]
+- ["13SideVolumeHUDAAC", "setup"]
+- ["13SideVolumeHUDAAC", "shared"]
+- !private ["13SideVolumeHUDAAC", "window"]
+- ["13SideVolumeHUD0aB13HUDHolderViewC", "init"]
+- ["13SideVolumeHUDAAC6OptionO5ThemeO", "=="]
+- ["13SideVolumeHUDAAC6OptionO5ThemeO", "__derived_enum_equals"]
+- ["13SideVolumeHUDAAC6OptionO5ThemeO", "_rawHashValue"]
+- ["13SideVolumeHUDAAC6OptionO5ThemeO", "dark"]
+- ["13SideVolumeHUDAAC6OptionO5ThemeO", "deinit"]
+- ["13SideVolumeHUDAAC6OptionO5ThemeO", "hash"]
+- ["13SideVolumeHUDAAC6OptionO5ThemeO", "hashValue"]
+- ["13SideVolumeHUDAAC6OptionO5ThemeO", "light"]
+depends-nominal:
+- "13SideVolumeHUDAAC6OptionO14AnimationStyleO"
+- "SQ"
+- "SH"
+- !private "s6HasherV"
+- "13SideVolumeHUDAAC6OptionO"
+- "13SideVolumeHUDAAC7OptionsV"
+- "13SideVolumeHUDAAC6OptionO11OrientationO"
+- "13SideVolumeHUDAAC"
+- "13SideVolumeHUD0aB13HUDHolderViewC"
+- "13SideVolumeHUDAAC6OptionO5ThemeO"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/xpc/XPC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AppKit.framework/Headers/AppKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "b83a71cc84c35618bb441e85f3238636"

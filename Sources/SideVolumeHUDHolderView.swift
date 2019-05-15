@@ -3,7 +3,7 @@
 //  Github: @illescasDaniel
 //  License: MIT
 
-import UIKit
+//import UIKit
 
 #if canImport(Haptica)
 import Haptica

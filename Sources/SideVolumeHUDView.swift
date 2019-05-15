@@ -3,7 +3,7 @@
 //  Github: @illescasDaniel
 //  License: MIT
 
-import MediaPlayer
+//import MediaPlayer
 
 #if canImport(FontAwesome)
 import FontAwesome
