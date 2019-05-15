@@ -15,10 +15,10 @@
 		3D9C432E2274629C000A6585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9C432C2274629C000A6585 /* LaunchScreen.storyboard */; };
 		3D9C433422746323000A6585 /* SideVolumeHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9C429022745894000A6585 /* SideVolumeHUD.framework */; };
 		3D9C433522746323000A6585 /* SideVolumeHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9C429022745894000A6585 /* SideVolumeHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6534E0BC228C460F00DF99FE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6534E0BB228C460F00DF99FE /* Media.xcassets */; };
 		65CFE5A1228C3602003F6C81 /* SideVolumeHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CFE59E228C3602003F6C81 /* SideVolumeHUDView.swift */; };
 		65CFE5A2228C3602003F6C81 /* SideVolumeHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CFE59F228C3602003F6C81 /* SideVolumeHUD.swift */; };
 		65CFE5A3228C3602003F6C81 /* SideVolumeHUDHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CFE5A0228C3602003F6C81 /* SideVolumeHUDHolderView.swift */; };
-		65CFE5A5228C360D003F6C81 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65CFE5A4228C360D003F6C81 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +74,10 @@
 		3D9C432A2274629C000A6585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D9C432D2274629C000A6585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D9C432F2274629C000A6585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6534E0BB228C460F00DF99FE /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		65CFE59E228C3602003F6C81 /* SideVolumeHUDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideVolumeHUDView.swift; sourceTree = "<group>"; };
 		65CFE59F228C3602003F6C81 /* SideVolumeHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideVolumeHUD.swift; sourceTree = "<group>"; };
 		65CFE5A0228C3602003F6C81 /* SideVolumeHUDHolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideVolumeHUDHolderView.swift; sourceTree = "<group>"; };
-		65CFE5A4228C360D003F6C81 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +149,8 @@
 		3D9C42A0227458FA000A6585 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				65CFE59F228C3602003F6C81 /* SideVolumeHUD.swift */,
-				65CFE5A0228C3602003F6C81 /* SideVolumeHUDHolderView.swift */,
-				65CFE59E228C3602003F6C81 /* SideVolumeHUDView.swift */,
-				65CFE5A4228C360D003F6C81 /* Media.xcassets */,
+				6534E0BD228C470F00DF99FE /* Code */,
+				6534E0BB228C460F00DF99FE /* Media.xcassets */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -184,6 +182,16 @@
 				3D9C432F2274629C000A6585 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6534E0BD228C470F00DF99FE /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				65CFE59F228C3602003F6C81 /* SideVolumeHUD.swift */,
+				65CFE5A0228C3602003F6C81 /* SideVolumeHUDHolderView.swift */,
+				65CFE59E228C3602003F6C81 /* SideVolumeHUDView.swift */,
+			);
+			path = Code;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65CFE5A5228C360D003F6C81 /* Media.xcassets in Resources */,
+				6534E0BC228C460F00DF99FE /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
