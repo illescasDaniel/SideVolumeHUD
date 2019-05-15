@@ -56,7 +56,7 @@ Remember to run it on a real device, since custom volume views doesn't work in t
 
 ## Installation
 
-### CocoaPods [CURRENTLY NOT SUPPORTED - WIP]
+### CocoaPods (volume icons not working - Its a [CocoaPods Issue](https://github.com/CocoaPods/CocoaPods/issues/8122))
 
 SideVolumeHUD is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -65,7 +65,7 @@ it, simply add the following line to your Podfile:
 pod 'SideVolumeHUD'
 ```
 
-### Carthage [Works]
+### Carthage
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
@@ -78,16 +78,6 @@ github "illescasDaniel/SideVolumeHUD"
 Run `carthage update` to build the framework and drag the built `SideVolumeHUD.framework` into your Xcode project.
 
 On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” and add the Framework path as mentioned in [Carthage Getting started Step 4, 5 and 6](https://github.com/Carthage/Carthage/blob/master/README.md#if-youre-building-for-ios-tvos-or-watchos)
-
-### Swift Package Manager [NOT TESTED!]
-
-To integrate using Apple's [Swift Package Manager](https://swift.org/package-manager/), add the following as a dependency to your `Package.swift`:
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/Daniel Illescas Romero/SideVolumeHUD.git", from: "1.0.0")
-]
-```
 
 ### Manually
 
