@@ -2,7 +2,7 @@ language: swift
 osx_image: xcode10.2
 xcode_project: SideVolumeHUD.xcodeproj
 xcode_scheme: SideVolumeHUD-iOS
-xcode_sdk: iphonesimulator9.3
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
 env:
   global:
   - FRAMEWORK_NAME=SideVolumeHUD
