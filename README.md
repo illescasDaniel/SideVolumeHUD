@@ -50,7 +50,7 @@ Remember to run it on a real device, since custom volume views doesn't work in t
 ## Screenshots & videos
 
 <p float="left">
-   <img src="github/DemoVideo.gif" width="270">
+   <img src="github/DemoVideo.gif" width="150">
   <img src="github/images/vertical_.png" width="250">
 </p>
 
