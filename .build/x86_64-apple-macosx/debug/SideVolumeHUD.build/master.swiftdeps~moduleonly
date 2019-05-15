@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
-options: "37bf61be37ddd36f4f77498cc2bc3587"
-build_time: [1557925059, 148657000]
-inputs:
-  "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/Sources/SideVolumeHUD.swift": !dirty [1557924995, 472289058]
-  "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/Sources/SideVolumeHUDHolderView.swift": !dirty [1557924589, 505236761]
-  "/Users/daniel/Documents/Programming/IDE Projects/Xcode/Projects/SideVolumeHUD/Sources/SideVolumeHUDView.swift": !dirty [1557924589, 512250868]
