@@ -3,7 +3,23 @@
 //  Github: @illescasDaniel
 //  License: MIT
 
-//import MediaPlayer
+import class Foundation.NSBundle.Bundle
+import struct Foundation.NSNotification.Notification
+import class Foundation.NSNotification.NSNotification
+import class Foundation.NSCoder
+import class UIKit.UIColor
+import class UIKit.UIImage
+import class UIKit.UISlider
+import func UIKit.UIGraphicsBeginImageContextWithOptions
+import func UIKit.UIGraphicsEndImageContext
+import func UIKit.UIGraphicsGetCurrentContext
+import class UIKit.UIGraphicsImageRenderer
+import struct CoreGraphics.CGFloat
+import struct CoreGraphics.CGRect
+import struct CoreGraphics.CGSize
+import struct CoreGraphics.CGPoint
+import struct CoreGraphics.CGAffineTransform
+import class MediaPlayer.MPVolumeView
 
 #if canImport(FontAwesome)
 import FontAwesome

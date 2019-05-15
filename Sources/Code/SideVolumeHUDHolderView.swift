@@ -3,7 +3,30 @@
 //  Github: @illescasDaniel
 //  License: MIT
 
-//import UIKit
+import func Foundation.pow
+import class Dispatch.DispatchQueue
+import struct Dispatch.DispatchTime
+import struct Foundation.NSNotification.Notification
+import class Foundation.NSNotification.NotificationCenter
+import class UIKit.UIWindow
+import class UIKit.UIView
+import class UIKit.UIColor
+import class UIKit.UIBlurEffect
+import class UIKit.UIBezierPath
+import class UIKit.UIMotionEffectGroup
+import func UIKit.UIGraphicsEndImageContext
+import func UIKit.UIGraphicsGetCurrentContext
+import class UIKit.UILayoutGuide
+import class UIKit.UIInterpolatingMotionEffect
+import struct UIKit.UIRectCorner
+import class UIKit.UIVisualEffectView
+import class UIKit.UIImpactFeedbackGenerator
+import class UIKit.UISelectionFeedbackGenerator
+import struct CoreGraphics.CGFloat
+import struct CoreGraphics.CGRect
+import struct CoreGraphics.CGSize
+import struct CoreGraphics.CGAffineTransform
+import class QuartzCore.CAShapeLayer
 
 #if canImport(Haptica)
 import Haptica
@@ -155,7 +178,9 @@ class SideVolumeHUDHolderView: UIView {
 	private func animateCompletion() {
 		let defaultTransformation = self.defaultTransformation(for: self.options.animationStyle)
 		defaultTransformation.preAnimationStuff()
-		DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1400)) { //Async.main(after: 1.4) {
+		let delay: Double = 1.4 * pow(10, 9)
+		let delayDispatchTime = DispatchTime(uptimeNanoseconds: DispatchTime.now().uptimeNanoseconds + UInt64(delay))
+		DispatchQueue.main.asyncAfter(deadline: delayDispatchTime) {
 			UIView.animate(withDuration: defaultTransformation.animationTime, delay: 0,
 						   options: defaultTransformation.options, animations: {
 				if let transform = defaultTransformation.transform {

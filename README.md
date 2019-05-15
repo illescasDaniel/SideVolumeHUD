@@ -47,9 +47,16 @@ You can also use it in landscape style, which looks really cool too :D
 The example application is the best way to see `SideVolumeHUD` in action. Simply open the `SideVolumeHUD.xcodeproj` and run the `Example` scheme.
 Remember to run it on a real device, since custom volume views doesn't work in the simulator.
 
+## Screenshots & videos
+
+<p float="left">
+   <img src="github/DemoVideo.gif" width="270">
+  <img src="github/images/vertical_.png" width="250">
+</p>
+
 ## Installation
 
-### CocoaPods
+### CocoaPods [CURRENTLY NOT SUPPORTED - WIP]
 
 SideVolumeHUD is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -58,7 +65,7 @@ it, simply add the following line to your Podfile:
 pod 'SideVolumeHUD'
 ```
 
-### Carthage
+### Carthage [Works]
 
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
@@ -72,7 +79,7 @@ Run `carthage update` to build the framework and drag the built `SideVolumeHUD.f
 
 On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase” and add the Framework path as mentioned in [Carthage Getting started Step 4, 5 and 6](https://github.com/Carthage/Carthage/blob/master/README.md#if-youre-building-for-ios-tvos-or-watchos)
 
-### Swift Package Manager
+### Swift Package Manager [NOT TESTED!]
 
 To integrate using Apple's [Swift Package Manager](https://swift.org/package-manager/), add the following as a dependency to your `Package.swift`:
 
