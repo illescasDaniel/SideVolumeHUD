@@ -1,0 +1,7 @@
+# SideVolumeHUD document generator jazzy settings
+
+copyright: Copyright 2019 Daniel Illescas Romero
+author: Daniel Illescas Romero
+xcodebuild_arguments: [-target, SideVolumeHUD-iOS]
+clean: true
+output: ./Documentation
